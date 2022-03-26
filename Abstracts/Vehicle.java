@@ -5,11 +5,6 @@ public abstract class Vehicle implements IPrintable {
     private int make;
     private String plate;
 
-    @Override
-    public void printMyData() {
-
-    }
-
     public int getMake() {
         return make;
     }
@@ -24,5 +19,10 @@ public abstract class Vehicle implements IPrintable {
 
     public void setPlate(String plate) {
         this.plate = plate;
+    }
+
+    @Override
+    public void printMyData() {
+
     }
 }

@@ -5,11 +5,7 @@ import Interfaces.IPrintable;
 public class Employee implements IPrintable {
     private String name;
     private int age;
-
-    @Override
-    public void printMyData() {
-
-    }
+    private Vehicle vehicle;
 
     public String getName() {
         return name;
@@ -33,5 +29,18 @@ public class Employee implements IPrintable {
 
     public double calcEarnings () {
         return 1000.00;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    @Override
+    public void printMyData() {
+
     }
 }
