@@ -1,10 +1,17 @@
 package Models;
 
 import Abstracts.Employee;
+import Abstracts.Vehicle;
 
 public class FullTime extends Employee {
     private double salary;
     private double bonus;
+
+    public FullTime(String name, int age, Vehicle vehicle, double salary, double bonus) {
+        super(name, age, vehicle);
+        this.salary = salary;
+        this.bonus = bonus;
+    }
 
     public double getSalary() {
         return salary;

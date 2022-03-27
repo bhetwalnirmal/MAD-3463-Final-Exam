@@ -7,6 +7,12 @@ public class Employee implements IPrintable {
     private int age;
     private Vehicle vehicle;
 
+    public Employee(String name, int age, Vehicle vehicle) {
+        this.name = name;
+        this.age = age;
+        this.vehicle = vehicle;
+    }
+
     public String getName() {
         return name;
     }
@@ -41,6 +47,9 @@ public class Employee implements IPrintable {
 
     @Override
     public void printMyData() {
-
+        System.out.print("Name:");
+        System.out.println(this.getName());
+        System.out.print("Year of Birth:");
+        System.out.println(this.calcBirthYear());
     }
 }
