@@ -2,14 +2,19 @@ package Abstracts;
 import Interfaces.IPrintable;
 
 public abstract class Vehicle implements IPrintable {
-    private int make;
+    private String make;
     private String plate;
 
-    public int getMake() {
+    public Vehicle(String make, String plate) {
+        this.make = make;
+        this.plate = plate;
+    }
+
+    public String getMake() {
         return make;
     }
 
-    public void setMake(int make) {
+    public void setMake(String make) {
         this.make = make;
     }
 
@@ -23,6 +28,6 @@ public abstract class Vehicle implements IPrintable {
 
     @Override
     public void printMyData() {
-
+        System.out.println("Employee has no Vehicle");
     }
 }

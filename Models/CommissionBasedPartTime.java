@@ -1,6 +1,5 @@
 package Models;
 
-import Abstracts.Employee;
 import Abstracts.Vehicle;
 
 public class CommissionBasedPartTime extends PartTime {
@@ -22,5 +21,15 @@ public class CommissionBasedPartTime extends PartTime {
     @Override
     public double calcEarnings() {
         return (this.getRate() * this.getHoursWorked()) + this.getCommission();
+    }
+
+    @Override
+    public void printMyData() {
+        super.printMyData();
+        System.out.println("Employee is Part Time / Commissioned");
+        System.out.println("\t - Rate:" + this.getRate());
+        System.out.println("\t - Hours Worked:" + this.getHoursWorked());
+        System.out.println("\t - Commission:" + this.getCommission());
+        System.out.println("\t - Earnings:" + this.calcEarnings());
     }
 }
