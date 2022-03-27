@@ -33,4 +33,11 @@ public class FullTime extends Employee {
     public double calcEarnings() {
         return this.getSalary() + this.getBonus();
     }
+
+    @Override
+    public void printMyData() {
+        super.printMyData();
+        System.out.println("Employee is Full-time.");
+        System.out.println("\t - Earnings:" + this.calcEarnings());
+    }
 }
